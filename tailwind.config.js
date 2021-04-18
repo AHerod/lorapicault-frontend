@@ -12,12 +12,14 @@ module.exports = {
       success: "",
       warning: "",
       danger: "",
+      black: "#000000",
+      white: "#ffffff",
+      transparent: "transparent"
     },
     fontFamily: {
       primary: ["Lato", "sans-serif"],
       secondary: ["Alex Brush", "cursive"],
     },
-    extend: {},
   },
   variants: {
     extend: {},

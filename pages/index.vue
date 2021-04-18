@@ -1,10 +1,6 @@
 <template lang="pug">
-.container
-  div(class="flex justify-center align-center")
-    h1(class="font-secondary text-9xl")
-      | Lora Picault
+  div(class="font-primary")
+    hero
 </template>
-
 <script>
-export default {};
 </script>
