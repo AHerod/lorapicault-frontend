@@ -1,7 +1,7 @@
 <template lang="pug">
-  div(class="font-primary")
-    hero
-    about
+.font-primary
+  hero
+  about
+  popular-services
 </template>
-<script>
-</script>
+<script></script>

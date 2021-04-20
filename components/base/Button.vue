@@ -1,9 +1,9 @@
 <template lang="pug">
-component(
+component.text-white.font-bold.uppercase.h-full.border-2.px-8(
   :is="tag",
   :href="href",
-  :class="[`bg-${color} border-${color} hover:bg-${color}`, variation === 'fill' ? 'hover:bg-transparent' : `bg-transparent`]",
-  class="text-white font-bold uppercase h-full border-2 px-8 md:px-10 py-1.5 md:py-3 hover:bg-secondary hover:border-secondary"
+  :class="[`bg-${color} border-${color} hover:bg-${color}`, color === 'primary' ? 'bg-primary' : 'hover:bg-secondary']",
+  class="md:px-10 py-1.5 md:py-3 hover:bg-secondary hover:border-secondary"
 )
   slot
 </template>

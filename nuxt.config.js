@@ -52,10 +52,10 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: {
     dirs: [
-      '~/components',
-      { path: '~/components/base/', prefix: 'base' },
-      { path: '~/components/sections/'}
-    ]
+      "~/components",
+      { path: "~/components/base/", prefix: "base" },
+      { path: "~/components/sections/" },
+    ],
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
