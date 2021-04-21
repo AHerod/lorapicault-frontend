@@ -1,9 +1,9 @@
 <template lang="pug">
-section.grid.grid-cols-2.py-28.gap-x-8.text-primary
-  .flex.justify-end.col-span-12.min-w-full(class="lg:col-end-1")
-    h1.font-extrabold.uppercase.text-2xl.text-right(class="sm:text-5xl w-3/4") Most Popular Services
-  .col-span-12(class="md:max-w-prose")
-    .flex.flex-col.justify-center.max-w-2xl(class="md:justify-start")
+section(class="md:px-0").px-4.grid.grid-cols-5.py-28.gap-x-8.text-primary
+  .flex.justify-end.min-w-full(class="col-span-5 md:col-span-2")
+    h1.font-extrabold.uppercase.text-2xl.text-right(class="sm:text-5xl w-3/4 pb-8") Most Popular Services
+  .col-span-3(class="col-span-5 md:col-span-3")
+    .flex.flex-col.justify-center(class="md:justify-start md:w-5/6")
       .mb-6.flex.justify-between.items-start(
         v-for="service in services",
         class="lg:mb-8"
