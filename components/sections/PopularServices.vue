@@ -9,10 +9,10 @@ section(class="md:px-0").px-4.grid.grid-cols-5.py-28.gap-x-8.text-primary
         class="lg:mb-8"
       )
         div
-          p.uppercase.font-bold.text-xl {{ service.name }}
-          p.capitalize.text-lg {{ service.info }}
-          p.capitalize.text-lg {{ service.duration }}
-        p.font-extrabold.text-secondary.text-2xl {{ service.price }}
+          p(class="md:text-xl").uppercase.font-bold {{ service.name }}
+          p(class="md:text-lg").capitalize {{ service.info }}
+          p(class="md:text-lg").capitalize {{ service.duration }}
+        p(class="md:text-2xl").font-extrabold.text-secondary {{ service.price }}
       base-button.max-w-max.mt-4(
         href="google.com",
         color="primary",
