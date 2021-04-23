@@ -2,7 +2,6 @@
 .font-primary
   hero
   about
-  benefits
   gallery
   popular-services
 </template>
