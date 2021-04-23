@@ -9,7 +9,6 @@
             img(:src="require(`@/assets/images/icons/makeup_${item.icon}.png`)" class="w-14 h-14 lg:w-16 lg:h-16 absolute right-1/2 bottom-1/4")
         h3(class="font-bold text-xl pb-2") {{item.title}}
         p(class="w-2/3") {{item.info}}
-
 </template>
 
 <script>

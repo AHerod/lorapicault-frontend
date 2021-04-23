@@ -5,5 +5,6 @@
   benefits
   gallery
   popular-services
+  testimonials
 </template>
 <script></script>
