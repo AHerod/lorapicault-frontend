@@ -2,7 +2,8 @@
 .font-primary
   hero
   about
-  popular-services
+  benefits
   gallery
+  popular-services
 </template>
 <script></script>
