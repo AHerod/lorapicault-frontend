@@ -6,8 +6,10 @@ module.exports = {
     colors: {
       primary: "#2c2c2c",
       secondary: "#fbbaa1",
-      light: "#c5c5c5",
+      light: "#fafafa",
+      medium: "#c5c5c5",
       dark: "#6a6a6a",
+      heavy:'#3d3d3d',
       info: "",
       success: "",
       warning: "",

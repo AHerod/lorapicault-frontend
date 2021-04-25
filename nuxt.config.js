@@ -54,7 +54,7 @@ export default {
     dirs: [
       "~/components",
       { path: "~/components/base/", prefix: "base" },
-      { path: "~/components/sections/" },
+      { path: "~/components/sections/" }
     ],
   },
 

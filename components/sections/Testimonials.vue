@@ -1,5 +1,5 @@
 <template lang="pug">
-  section(class="md:px-0").py-28.px-4.flex.items-center.justify-center.bg-primary.text-white
+  section(class="md:px-0 py-14 md:py-28").px-4.flex.items-center.justify-center.bg-primary.text-white
     .flex.flex-col.items-center.justify-center(class="col-span-2 md:col-span-2")
       h2(class="text-2xl md:text-5xl font-extrabold uppercase") We love what we do
       svg(xmlns='http://www.w3.org/2000/svg' width='40' height='30' fill='#fbbaa1' class="my-6")

@@ -1,10 +1,10 @@
 <template lang="pug">
-.font-primary
+div
   hero
   about
   benefits
   gallery
   popular-services
   testimonials
+  brands
 </template>
-<script></script>

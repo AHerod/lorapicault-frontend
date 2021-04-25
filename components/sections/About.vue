@@ -1,7 +1,7 @@
 <template lang="pug">
-section(class="grid-cols-1 md:grid-cols-2").bg-primary.text-white.grid.py-28.gap-x-20
+section(class="grid-cols-1 md:grid-cols-2 py-14 md:py-28").bg-primary.text-white.grid.gap-x-20
   .flex.justify-center.col-span-1(class="lg:col-span-1")
-    img.max-w-lg(:src="backgroundUrl")
+    img(:src="backgroundUrl" class="w-10/12 md:max-w-lg")
   .container.mx-auto.px-4.py-24.text-center.flex.flex-col.items-center.col-span-1(
     class="md:px-18 xl:px-24 lg:py-32 lg:col-span-1"
   )
