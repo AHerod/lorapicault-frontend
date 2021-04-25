@@ -16,7 +16,7 @@ export default {
     appName,
   },
   // Target: https://go.nuxtjs.dev/config-target
-  target: "static",
+  target: "server",
 
   axios: {
     baseURL: "https://lorapicault-backend.herokuapp.com",
