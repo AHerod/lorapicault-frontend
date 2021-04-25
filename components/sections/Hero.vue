@@ -1,6 +1,6 @@
 <template lang="pug">
 section.bg-auto.bg-cover.bg-no-repeat.bg-center.text-white.flex.flex-col.justify-end(
-  class="md:bg-auto md:h-screen",
+  class="md:h-screen",
   :style="{ backgroundImage: `url(${backgroundUrl})` }"
 )
   .container.mx-auto.px-4.py-24(class="md:px-18 xl:px-24 lg:py-32")
