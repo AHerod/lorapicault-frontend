@@ -54,21 +54,11 @@ export default {
         }]
     };
   },
-  created() {
-    if (process.browser) {
-      console.log('browser')
-      window.addEventListener("resize", this.updateElementHeight);
-    } else {
-      console.log('not browser')
-    }
-  },
-  destroyed() {
-    if (process.browser) {
-      window.removeEventListener("resize", this.updateElementHeight);
-    }
-  },
   mounted() {
-    this.updateElementHeight()
+    this.$nextTick(function () {
+      this.updateElementHeight();
+    })
+    window.addEventListener('resize', this.updateElementHeight)
   },
   methods: {
     updateElementHeight: function () {
