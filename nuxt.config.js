@@ -7,7 +7,6 @@ const cloudinarySecret = process.env.CLOUDINARY_SECRET;
 const appName = process.env.APP_NAME;
 
 export default {
-  ssr: false,
   env: {
     strapiAPIUri,
     strapiBaseUri,
