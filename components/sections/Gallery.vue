@@ -1,5 +1,5 @@
 <template lang="pug">
-  section(class="md:px-0 py-14 md:py-28").bg-primary.text-white
+  section(class="md:px-0 py-14 md:py-28").bg-primary.text-white.py-28
     div(class="flex justify-center align-center flex-wrap")
       span(v-for="filter in filters" class="text-sm sm:text-lg p-2 md:px-8 uppercase") {{filter}}
     div(class="grid grid-cols-4 gap-4 md:gap-8 px-4 md:px-8  pt-6 md:px-24")
@@ -56,7 +56,10 @@ export default {
   },
   created() {
     if (process.browser) {
+      console.log('browser')
       window.addEventListener("resize", this.updateElementHeight);
+    } else {
+      console.log('not browser')
     }
   },
   destroyed() {
@@ -65,14 +68,11 @@ export default {
     }
   },
   mounted() {
-    this.height = this.getElementHeight(this.$refs.square.[1].clientWidth)
+    this.updateElementHeight()
   },
   methods: {
-    getElementHeight: function (width) {
-      return width;
-    },
     updateElementHeight: function () {
-      this.height = this.getElementHeight(this.$refs.square.[1].clientWidth)
+      this.height = this.$refs.square[1].clientWidth
     }
   }
 };
