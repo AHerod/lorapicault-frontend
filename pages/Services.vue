@@ -28,16 +28,19 @@
       section(id="voucher").flex.flex-col.items-center.justify-center.pt-16.pb-10
         h2(class="text-2xl md:text-4xl font-extrabold uppercase pb-3 md:pb-6") Voucher
         p(class="text-lg text-center w-4/5 md:w-1/2 lg:w-1/3 mb-6 lg:mb-12") If you have short and rare eyelashes then eyelash extension is what you need.
+        img(:src="voucherUrl")
 </template>
 
 <script>
 import backgroundUrl from "~/assets/images/services_placeholder.jpg";
+import voucherUrl from "~/assets/images/voucher_placeholder.jpg";
 import currency from "@/mixins/currency";
 
 export default {
   mixins: [currency],
   data() {
     return {
+      voucherUrl,
       backgroundUrl,
       nav: [{name: 'services', path: 'services'}, {name: 'packages', path: 'packages'}, {
         name: 'lessons',
