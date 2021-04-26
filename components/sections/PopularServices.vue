@@ -4,15 +4,7 @@ section(class="md:px-0 py-14 md:py-28").px-4.grid.grid-cols-5.gap-x-8.text-prima
     h1.font-extrabold.uppercase.text-2xl.text-right(class="sm:text-5xl w-3/4 pb-8") Most Popular Services
   .col-span-3(class="col-span-5 md:col-span-3")
     .flex.flex-col.justify-center(class="md:justify-start md:w-5/6")
-      .mb-6.flex.justify-between.items-start(
-        v-for="service in services",
-        class="lg:mb-8"
-      )
-        div
-          p(class="md:text-xl").uppercase.font-bold {{ service.name }}
-          p(class="md:text-lg").capitalize {{ service.info }}
-          p(class="md:text-lg").capitalize {{ service.duration }}
-        p(class="md:text-2xl").font-extrabold.text-secondary {{ service.price }}
+      pricing(:services="services")
       base-button.max-w-max.mt-4(
         href="google.com",
         color="primary",
@@ -22,7 +14,12 @@ section(class="md:px-0 py-14 md:py-28").px-4.grid.grid-cols-5.gap-x-8.text-prima
 </template>
 
 <script>
+import currency from '@/mixins/currency'
+import Services from "@/pages/Services";
+import Pricing from "@/components/Pricing";
 export default {
+  components: {Pricing, Services},
+  mixins: [currency],
   data() {
     return {
       services: [
