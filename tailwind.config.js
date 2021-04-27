@@ -1,20 +1,5 @@
 module.exports = {
   jit: true,
-  purge: {
-    mode: 'layers',
-    content:
-      [
-        './components/**/*.{vue,js,pug}',
-        './layouts/**/*.{vue,js,pug}',
-        './pages/**/*.{vue,js,pug}',
-        './plugins/**/*.{js,ts}',
-        './nuxt.config.{js,ts}'
-      ],
-    options: {
-      keyframes: true,
-      safelist: ['html', 'body']
-    }
-  },
   darkMode: false,
   theme: {
     colors: {
