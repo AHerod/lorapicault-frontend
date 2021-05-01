@@ -11,7 +11,7 @@ section(class="grid-cols-1 md:grid-cols-2 py-14 md:py-28").bg-primary.text-white
     h1.font-extrabold.text-2xl(class="sm:text-5xl md:text-7xl") Lora Picault
     p.pr-4.pt-8.pb-10.text-sm.max-w-screen-sm(class="md:text-lg") Eyora – the center for creating a luxurious image. We make every woman uniquely beautiful! We have a team of professional masters, we work on the highest quality materials and now set the standard for standards of beauty!
     .flex.flex-col.justify-center(class="md:flex-row md:justify-start")
-      base-button(href="google.com", variant="outline")
+      base-button(tag="a" href="about" variant="outline")
         | Read More
 </template>
 

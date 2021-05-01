@@ -9,6 +9,7 @@ module.exports = {
       medium: "#c5c5c5",
       dark: "#6a6a6a",
       heavy:'#3d3d3d',
+      accent: "#fff7f4",
       info: "",
       success: "",
       warning: "",

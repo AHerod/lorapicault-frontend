@@ -12,7 +12,7 @@ section.bg-auto.bg-cover.bg-no-repeat.bg-center.text-white.flex.flex-col.justify
     .flex.flex-col.justify-center(class="md:flex-row md:justify-start")
       base-button.mb-4(href="google.com", color="secondary", class="md:mr-6")
         | Book Now
-      base-button(href="google.com", variant="outline")
+      base-button(tag="a" href="about" variant="outline")
         | About Us
 </template>
 

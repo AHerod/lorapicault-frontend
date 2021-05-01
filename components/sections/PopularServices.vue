@@ -5,12 +5,16 @@ section(class="md:px-0 py-14 md:py-28").px-4.grid.grid-cols-5.gap-x-8.text-prima
   .col-span-3(class="col-span-5 md:col-span-3")
     .flex.flex-col.justify-center(class="md:justify-start md:w-5/6")
       pricing(:services="services")
-      base-button.max-w-max.mt-4(
-        href="google.com",
-        color="primary",
-        variant="fill"
-      )
-        | Book Now
+      .grid.grid-cols-2.gap-y-2(class="sm:gap-x-4 sm:max-w-max")
+        base-button(
+          href="google.com",
+          color="primary",
+          variant="fill"
+          class="col-span-2 sm:col-span-1"
+        )
+          | Book Now
+        base-button(color="secondary" variant="outline" tag="a" href="services" class="col-span-2 sm:col-span-1")
+          | See All Services
 </template>
 
 <script>

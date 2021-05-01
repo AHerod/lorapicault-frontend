@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      routes: [{path: 'About', name: 'About'},{path: 'Services', name: 'Services'}, {path: 'Gallery', name: 'Gallery'}]
+      routes: [{path: 'about', name: 'About'},{path: 'services', name: 'Services'}, {path: 'gallery', name: 'Gallery'}, {path: 'faq', name: 'FAQ'}]
     }
   },
 };
