@@ -16,7 +16,7 @@ section(class="grid-cols-1 md:grid-cols-2 py-14 md:py-28").bg-primary.text-white
 </template>
 
 <script>
-import backgroundUrl from "~/assets/images/about_placeholder.jpg";
+import backgroundUrl from "assets/images/about_placeholder_2.jpg";
 export default {
   data() {
     return { backgroundUrl };

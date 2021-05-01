@@ -27,9 +27,11 @@ export default {
       backgroundUrl,
        data: [
         {
-          title: 'Tailwind CSS is awesome?',
+          title: 'Dlaczego makijaż próbny ślubne jest obowiązkowy?',
           content:
-            'Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.',
+            'Makijaż próbny trwa dłużej niż makijaż ślubny ponieważ w tym czasie określamy nasze oczekiwania , omawiamy  kolorystykę oraz dobieramy makijaż do typu urody.\n' +
+            'W tym czasie wprowadzamy zmiany np. testujemy różne kolory pomadki. Przyszła panna młoda może także sprawdzić jak makijaż współgra z fryzurą oraz kreacją którą ma na siebie założyć w dniu ceremonii. \n' +
+            'Te wszystkie czynniki wpływają na to, że makijaż ślubny próbny jest bardzo ważnym procesem w przygotowaniu przyszłego makijażu panny młodej.',
         },
         {
           title:

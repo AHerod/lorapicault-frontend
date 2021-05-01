@@ -5,8 +5,8 @@
     )
       .container.mx-auto.px-4(class="pt-32 md:pt-48 lg:pt-72 pb-8")
         h1.font-extrabold.text-2xl(class="sm:text-5xl md:text-7xl") About Me
-    div.bg-primary.text-white
-      section(class="grid-cols-1 sm:grid-cols-5 py-14 md:py-28").grid
+    div
+      section(class="grid-cols-1 sm:grid-cols-5 py-14 md:py-28 md:px-16").grid
         .col-span-1(class="sm:col-span-2 px-3")
           img(:src="personalImageUrl" class="")
         .container.mx-auto.px-4.py-14.flex.flex-col.col-span-1(
@@ -23,7 +23,7 @@
 
 <script>
 import backgroundUrl from "~/assets/images/services_placeholder.jpg";
-import personalImageUrl from "~/assets/images/about_placeholder.jpg";
+import personalImageUrl from "assets/images/about_placeholder.jpg";
 
 export default {
   data() {

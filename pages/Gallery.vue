@@ -9,7 +9,7 @@
             p(class="text-lg text-center md:w-1/2 lg:w-1/3 mb-6 lg:mb-12") Familiarize yourself with the works of our masters. All procedures are performed by experienced masters of our studio.
     section(class="md:px-0 py-20")
       div(class="flex justify-center align-center flex-wrap")
-        span(v-for="(filter,index) in filters" :key="index+'filter'" class="text-sm sm:text-lg p-2 md:px-8 uppercase") {{filter}}
+        span(v-for="(filter,index) in filters" :key="index+'filter'" class="text-sm sm:text-lg p-2 md:px-8 uppercase order-b border-b border-transparent hover:border-black cursor-pointer hover:font-bold text-center") {{filter}}
       div(class="grid grid-cols-4 gap-4 md:gap-8 px-4 pt-6 md:px-10")
         div(:style="`height: ${height}px`" class="relative w-full" v-for="(image,index) in images" :key="index+'img'" :class=`[ image.size === 1 ? 'col-span-2 md:col-span-1' : 'col-span-4 md:col-span-2']`)
           img(ref="square" :style="`height: ${height}px`" :src="image.url" class="w-full block absolute transform object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2")

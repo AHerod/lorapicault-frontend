@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   hero
-  about
+  about(v-if="false")
   benefits
   gallery
   popular-services
