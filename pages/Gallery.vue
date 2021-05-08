@@ -72,8 +72,9 @@ export default {
   },
   methods: {
     updateElementHeight: function () {
-      console.log('UPDATE')
-      this.height = this.$refs.square[1].clientWidth
+      if (this.$refs.square[1]) {
+        this.height = this.$refs.square[1].clientWidth
+      }
     }
   }
 };

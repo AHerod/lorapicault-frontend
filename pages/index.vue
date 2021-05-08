@@ -5,6 +5,5 @@ div
   benefits
   gallery
   popular-services
-  testimonials
   brands
 </template>
