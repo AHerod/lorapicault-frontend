@@ -3,7 +3,7 @@ component.text-white.font-bold.uppercase.h-full.border-2.px-8(
   :is="tag",
   :href="href",
   :class="[`bg-${color} border-${color} hover:bg-${color}`, color === 'primary' ? 'bg-primary' : 'hover:bg-secondary']",
-  class="md:px-10 py-1.5 md:py-3 hover:bg-secondary hover:border-secondary text-center"
+  class="md:px-10 py-1.5 md:py-3 hover:bg-secondary hover:border-secondary text-center transition duration-500 ease-in-out"
 )
   slot
 </template>
