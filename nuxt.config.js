@@ -1,6 +1,5 @@
 const strapiBaseUri = process.env.BACKEND_URL || "http://localhost:1337";
-const strapiAPIUri =
-  process.env.GRAPHQL_API_URL || "http://localhost:1337/graphql";
+const strapiAPIUri = process.env.GRAPHQL_API_URL || "http://localhost:1337/graphql";
 const cloudinaryName = process.env.CLOUDINARY_NAME;
 const cloudinaryKey = process.env.CLOUDINARY_KEY;
 const cloudinarySecret = process.env.CLOUDINARY_SECRET;
@@ -70,6 +69,7 @@ export default {
     "@nuxtjs/axios",
     // https://go.nuxtjs.dev/content
     "@nuxtjs/cloudinary",
+    '@nuxtjs/apollo'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -80,4 +80,14 @@ export default {
     apiKey: cloudinaryKey,
     apiSecret: cloudinarySecret,
   },
+
+  // Apollo
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: strapiAPIUri
+      }
+    }
+  }
+
 };

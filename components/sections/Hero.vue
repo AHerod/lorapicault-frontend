@@ -3,14 +3,12 @@ div(class="relative showcase md:h-screen")
   .container.mx-auto.px-4.py-24(class="md:px-18 lg:py-32 z-10 pt-32")
     p.capitalize.font-secondary.text-secondary.text-xl.leading-4(
       class="sm:text-3xl md:text-5xl"
-    ) Change yourself
-    h1.font-extrabold.text-2xl(class="sm:text-5xl md:text-7xl text-white") Eye brows
-    p.pr-4.pt-2.pb-8.text-sm.max-w-screen-sm(class="md:text-lg text-medium") Eyebrow microblading is the art of creating fuller thicker eyebrows through the use if a manual tattooing technique
+    ) {{ start.Naglowek }}
+    h1.font-extrabold.text-2xl(class="sm:text-5xl md:text-7xl text-white") {{ start.Tytul }}
+    p.pr-4.pt-2.pb-8.text-sm.max-w-screen-sm(class="md:text-lg text-medium") {{ start.Opis }}
     .flex.flex-col.justify-center(class="md:flex-row md:justify-start")
-      base-button.mb-4(href="google.com", color="secondary", class="md:mr-6")
-        | Book Now
-      base-button(tag="a" href="about" variant="outline")
-        | About Us
+      base-button.mb-4(tag="a" :href="start.Przycisk.url", color="secondary", class="md:mr-6")
+        | {{ start.Przycisk.tekst }}
   .video-container(v-if="video")
     video(src='https://res.cloudinary.com/aherod/video/upload/v1619879518/LORAPICAULT/IMG_1094.MP4_llwnui.mp4' autoplay muted loop)
   section.bg-auto.bg-cover.bg-no-repeat.bg-center.text-white.flex.flex-col.justify-end(
@@ -33,6 +31,7 @@ div(class="relative showcase md:h-screen")
 
 <script>
 import backgroundUrl from "~/assets/images/hero_placeholder.jpg";
+import heroQuery from '~/apollo/queries/hero'
 
 export default {
   data() {
@@ -40,6 +39,11 @@ export default {
       backgroundUrl,
       video: true
     };
+  },
+  apollo: {
+    start: {
+      query: heroQuery
+    }
   },
 };
 </script>
