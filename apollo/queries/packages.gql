@@ -1,0 +1,10 @@
+query allPakiets {
+  pakiets {
+    nazwa
+    czas_trwania
+    cena
+    uslugi {
+      element
+    }
+  }
+}

@@ -1,0 +1,9 @@
+query allLekcjas {
+  lekcjas {
+    nazwa
+    opis
+    czas_trwania
+    cena
+    popularna
+  }
+}

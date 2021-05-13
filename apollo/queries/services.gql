@@ -1,0 +1,9 @@
+query allUslugas {
+  uslugas {
+    nazwa
+    opis
+    cena
+    czas_trwania
+    popularna
+  }
+}

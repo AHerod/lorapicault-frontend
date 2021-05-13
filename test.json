@@ -1,0 +1,35 @@
+{
+  "telefon": {
+    "tytul": "764 235 213",
+    "ikona": {
+      "url": "https://res.cloudinary.com/aherod/image/upload/v1620936942/phone_call_86fd2ea2ff.png",
+      "__typename": "UploadFile"
+    },
+    "__typename": "ComponentGrupaElement"
+  },
+  "email": {
+    "tytul": "mail@makup.com",
+    "ikona": {
+      "url": "https://res.cloudinary.com/aherod/image/upload/v1620936940/email_ec69d1f2a1.png",
+      "__typename": "UploadFile"
+    },
+    "__typename": "ComponentGrupaElement"
+  },
+  "adres": {
+    "tytul": "ul.Świetlista 19, Wrocław ",
+    "ikona": {
+      "url": "https://res.cloudinary.com/aherod/image/upload/v1620936943/placeholder_2259f42287.png",
+      "__typename": "UploadFile"
+    },
+    "__typename": "ComponentGrupaElement"
+  },
+  "instagram": {
+    "tytul": "Instagram @makuplora",
+    "ikona": {
+      "url": "https://res.cloudinary.com/aherod/image/upload/v1620936940/instagram_715700d6ea.png",
+      "__typename": "UploadFile"
+    },
+    "__typename": "ComponentGrupaElement"
+  },
+  "__typename": "Stopka"
+}

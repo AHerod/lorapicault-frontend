@@ -1,0 +1,28 @@
+query allStopka {
+  stopka {
+    telefon {
+      tytul
+      ikona {
+        url
+      }
+    }
+    email {
+      tytul
+      ikona {
+        url
+      }
+    }
+    adres {
+      tytul
+      ikona {
+        url
+      }
+    }
+    instagram {
+      tytul
+      ikona {
+        url
+      }
+    }
+  }
+}

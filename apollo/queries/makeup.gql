@@ -1,0 +1,5 @@
+query allMakeup {
+  makeups {
+    nazwa
+  }
+}

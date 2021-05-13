@@ -1,0 +1,9 @@
+query Cennik {
+  cennik {
+    tytul
+    opis
+    opis_pakietow
+    opis_lekcji
+    opis_vouchera
+  }
+}
