@@ -1,15 +1,15 @@
 query allStart {
   start {
-    Naglowek
-    Opis
-    Tytul
-    Przycisk {
+    naglowek
+    opis
+    tytul
+    przycisk {
       url
       tekst
     }
-    Tlo {
-      Obraz { url}
-      Video
+    tlo {
+      obraz { url}
+      video
     }
   }
 }

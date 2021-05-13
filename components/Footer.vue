@@ -7,11 +7,9 @@
         div(class="bg-heavy rounded-full w-14 h-14 mb-6 relative m-auto")
           img(:src="require(`@/assets/images/icons/${item.icon}.png`)" class="w-10 h-10 absolute right-1/2 bottom-1.5")
         h3(class="text-lg md:text-xl pb-2") {{item.title}}
-    h1(class="text-center col-span-2") {{footer.copyright}}
 </template>
 
 <script>
-import testQuery from '~/apollo/queries/test'
 // make a separate setting for each item
 export default {
   data() {
@@ -23,12 +21,7 @@ export default {
         {title: 'example@email.com', icon: 'email'}
       ]
     }
-  },
-  apollo: {
-    footer: {
-      query: testQuery
-    }
-  },
+  }
 }
 </script>
 

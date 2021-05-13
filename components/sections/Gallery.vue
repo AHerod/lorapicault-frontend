@@ -3,7 +3,7 @@
     h2(class="font-secondary md:pb-6 pb-3 text-6xl md:text-9xl text-center text-secondary") Portfolio
     div(class="flex justify-center align-center flex-wrap")
       span(class="text-sm sm:text-lg p-2 md:px-8 uppercase") Makijaż:
-      span(v-for="(filter,index) in filters" :key="index+'filter'" class="text-sm sm:text-lg p-2 md:px-6 uppercase border-b border-transparent hover:border-accent cursor-pointer hover:font-bold text-center") {{filter}}
+      span(v-for="(filter,index) in makeups" :key="index+'filter'" class="text-sm sm:text-lg p-2 md:px-6 uppercase border-b border-transparent hover:border-accent cursor-pointer hover:font-bold text-center") {{filter.nazwa}}
     div(class="grid grid-cols-4 gap-4 md:gap-8 px-4 md:px-8 pt-6 md:px-24")
       cool-light-box(:items="items" :index="index" @close="index = null" :autoplay="true" :useZoomBar="true")
       div(:style="`height: ${height}px`" class="shadow-2xl relative w-full" v-for="(image,imageIndex) in items" :key="imageIndex"  @click="index = imageIndex" :class=`[ image.size === 1 ? 'col-span-2 md:col-span-1' : 'col-span-4 md:col-span-2']`)
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import makeupQuery from '~/apollo/queries/makeup'
 import CoolLightBox from 'vue-cool-lightbox'
 import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
 export default {
@@ -31,9 +32,6 @@ export default {
       showByIndex: null,
       index: null,
       height: 50,
-      filters: [
-        'Ślubny', 'Naturalny', 'Okazjonalny', 'Biznesowy', 'Dla produkcji'
-      ],
       items: [{
         src: 'https://livewp.site/wp/md/eyora/wp-content/uploads/sites/68/2019/12/gallery_img_06-768x242.jpg',
         size: 2,
@@ -73,6 +71,11 @@ export default {
           size: 1
         }]
     };
+  },
+  apollo: {
+    makeups: {
+      query: makeupQuery
+    }
   },
   mounted() {
     this.$nextTick(function () {

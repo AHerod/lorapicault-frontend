@@ -1,0 +1,13 @@
+query allAtuty {
+  atuty {
+    opis,
+    tytul
+    element {
+      tytul
+      opis
+      ikona {
+        url
+      }
+    }
+  }
+}
