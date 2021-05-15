@@ -1,0 +1,13 @@
+query allFaq {
+	faq {
+    tytul
+    tlo {
+      url
+    }
+    opis
+    zestaw {
+      pytanie
+      odpowiedz
+    }
+  }
+}

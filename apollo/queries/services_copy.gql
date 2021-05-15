@@ -1,6 +1,7 @@
 query Cennik {
   cennik {
     tytul
+    tlo
     opis
     opis_pakietow
     opis_lekcji

@@ -1,9 +1,8 @@
 <template lang="pug">
 div
   hero
-  about(v-if="false")
   benefits
-  gallery
+  grid
   popular-services
   brands
 </template>

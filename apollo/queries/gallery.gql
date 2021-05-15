@@ -1,0 +1,20 @@
+query galeria {
+  galeria {
+    tytul
+    opis
+    tlo {
+      url
+    }
+    obraz {
+      medium {
+        url
+      }
+      makeups {
+        id
+      }
+      rozmiar
+      video
+      opis
+    }
+  }
+}

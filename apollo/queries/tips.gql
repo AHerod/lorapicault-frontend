@@ -1,0 +1,16 @@
+query wizyta {
+  wizyta {
+    opis
+    tytul
+    tlo {
+      url
+    }
+    krok {
+      tytul
+      opis
+      ikona {
+        url
+      }
+    }
+  }
+}

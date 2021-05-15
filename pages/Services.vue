@@ -1,7 +1,7 @@
 <template lang="pug">
-  div
+  div(v-if="cennik")
     div.bg-auto.bg-cover.bg-no-repeat.bg-center.text-white.flex.flex-col.justify-end(
-      :style="{ backgroundImage: `url(${backgroundUrl})` }"
+      :style="{ backgroundImage: `url(${cennik.tlo.url})` }"
     )
       .container.mx-auto.px-4(class="pt-32 md:pt-48 lg:pt-72 pb-8")
         h1.font-extrabold.text-2xl(class="sm:text-5xl md:text-7xl") Oferta
@@ -32,7 +32,6 @@
 </template>
 
 <script>
-import backgroundUrl from "~/assets/images/services_placeholder.jpg";
 import voucherUrl from "~/assets/images/voucher_placeholder.jpg";
 import currency from "@/mixins/currency";
 import servicesQuery from '~/apollo/queries/services'
@@ -45,7 +44,6 @@ export default {
   data() {
     return {
       voucherUrl,
-      backgroundUrl,
       nav: [{name: 'Usługi', path: 'services'}, {name: 'Pakiety', path: 'packages'}, {
         name: 'Lekcje',
         path: 'lessons'

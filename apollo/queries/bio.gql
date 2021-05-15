@@ -1,0 +1,15 @@
+query bio {
+  bio {
+    tytul
+    opis
+    zdjecie {
+      url
+    }
+    tlo {
+      url
+    }
+    galeria {
+      url
+    }
+  }
+}

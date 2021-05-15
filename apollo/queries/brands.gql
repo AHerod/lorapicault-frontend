@@ -1,0 +1,12 @@
+query allMarki {
+  marki {
+    tytul
+    opis
+    marka {
+      tytul
+      ikona {
+        url
+      }
+    }
+  }
+}

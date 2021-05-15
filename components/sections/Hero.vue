@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class="relative showcase md:h-screen")
+div(v-if="start" class="relative showcase md:h-screen")
   .container.mx-auto.px-4.py-24(class="md:px-18 lg:py-32 z-10 pt-32")
     p.capitalize.font-secondary.text-secondary.text-xl.leading-4(
       class="sm:text-3xl md:text-5xl"
