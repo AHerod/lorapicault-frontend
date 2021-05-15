@@ -32,6 +32,9 @@ export default {
       showByIndex: null,
       index: null,
       height: 50,
+      filters: [
+        'Ślubny', 'Naturalny', 'Okazjonalny', 'Biznesowy', 'Dla produkcji'
+      ],
       foto: [{
         src: 'https://livewp.site/wp/md/eyora/wp-content/uploads/sites/68/2019/12/gallery_img_06-768x242.jpg',
         size: 2,

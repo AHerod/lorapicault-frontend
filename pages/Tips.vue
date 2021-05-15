@@ -12,7 +12,7 @@
         .grid(class="grid-cols-1 md:grid-cols-3 flex items-start py-8")
           div(v-for="(item,index) in items" class="flex flex-col items-center justify-center text-center mb-10")
             div(class="bg-secondary rounded-full w-20 h-20 lg:w-24 lg:h-24 mb-6 relative")
-                img(:src="require(`@/assets/images/icons/makeup_${item.icon}.png`)" class="w-14 h-14 lg:w-16 lg:h-16 absolute right-1/2 bottom-1/4")
+                img(src="" class="w-14 h-14 lg:w-16 lg:h-16 absolute right-1/2 bottom-1/4")
             h3(class="font-bold text-xl pb-2") {{item.title}}
             p(class="w-2/3 normal-case") {{item.info}}
 </template>
