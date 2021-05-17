@@ -1,0 +1,24 @@
+query allPopular {
+  uslugas(where:{popularna:true}) {
+     nazwa
+     opis
+     cena
+     czas_trwania
+     popularna
+   }
+  lekcjas(where:{popularna:true}) {
+    nazwa
+    opis
+    czas_trwania
+    cena
+    popularna
+  }
+  pakiets(where:{popularna:true}) {
+    nazwa
+    czas_trwania
+    cena
+    uslugi {
+      element
+    }
+  }
+}

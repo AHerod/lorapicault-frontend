@@ -4,6 +4,5 @@ query allLekcjas {
     opis
     czas_trwania
     cena
-    popularna
   }
 }

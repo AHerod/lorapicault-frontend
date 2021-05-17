@@ -1,10 +1,15 @@
 query Cennik {
   cennik {
     tytul
-    tlo
+    tlo {
+        url
+    }
     opis
     opis_pakietow
     opis_lekcji
     opis_vouchera
+    zdjecie_vouchera {
+      url
+    }
   }
 }

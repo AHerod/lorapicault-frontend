@@ -28,7 +28,7 @@
       section(id="voucher").flex.flex-col.items-center.justify-center.pt-16.pb-10
         h2(class="text-2xl md:text-4xl font-extrabold uppercase pb-3 md:pb-6") Voucher
         p(class="text-lg text-center w-4/5 md:w-1/2 lg:w-1/3 mb-6 lg:mb-12") {{ cennik.opis_vouchera }}
-        img(:src="voucherUrl")
+        img(v-for="item in cennik.zdjecie_vouchera" :src="item.url" class="md:w-2/3")
 </template>
 
 <script>

@@ -17,6 +17,8 @@
     "core-js": "^3.9.1",
     "graphql-tag": "^2.12.4",
     "nuxt": "^2.15.3",
+    "swiper": "5.x",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-carousel": "^0.18.0",
     "vue-cool-lightbox": "^2.7.3"
   },
