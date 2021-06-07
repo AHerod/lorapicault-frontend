@@ -15,8 +15,8 @@
           p.capitalize.font-secondary.text-secondary.text-xl.leading-4(
             class="md:text-5xl"
           ) {{ bio.tytul }}
-          h1.font-extrabold.text-2xl(class="md:text-7xl") Lora Picault
-          p.pr-4.pt-4.pb-2.max-w-screen-sm(class="md:text-lg italic")  {{ bio.opis }}
+          h1.font-extrabold.text-2xl(class="md:text-4xl") Lora Picault
+          div(v-html="bio.opis").pr-4.pt-4.pb-2.max-w-screen-sm
         div(class="test col-span-1 sm:col-span-5 py-20")
           swiper(ref="mySwiper" :options="options" class="mx-18")
             swiper-slide(v-for="item in bio.galeria")

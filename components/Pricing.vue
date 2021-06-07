@@ -14,7 +14,7 @@
               li(v-for="item in service.uslugi" class="flex items-center")
                 span(class="bg-secondary block w-3 h-3 rounded-full ml-6 mr-4")
                 | {{item.element}}
-        p(v-else class="md:text-lg").capitalize {{ service.opis }}
+        p(v-else v-html="service.opis")
         p(class="md:text-lg italic").capitalize {{ service.czas_trwania }}
 </template>
 
