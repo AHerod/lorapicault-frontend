@@ -18,6 +18,11 @@ module.exports = {
       white: "#ffffff",
       transparent: "transparent",
     },
+    extend: {
+      spacing: {
+        hidden: '-9999px'
+      },
+    },
     fontFamily: {
       primary: ["Lato", "sans-serif"],
       secondary: ["Alex Brush", "cursive"],
