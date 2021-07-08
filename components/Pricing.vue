@@ -10,11 +10,11 @@
           p(class="border-b-2 md:border-b-4 border-dotted w-full ml-4 md:ml-8")
         p(class="md:text-2xl pl-2 col-span-3").text-center.font-extrabold.text-secondary.flex {{ getCurrencyFormat(service.cena) }}
       div
-        ul(v-if="Array.isArray(service.uslugi)" class="md:text-lg").capitalize
+        ul(v-if="Array.isArray(service.uslugi)" class="md:text-lg")
               li(v-for="item in service.uslugi" class="flex items-center")
                 span(class="bg-secondary block w-3 h-3 rounded-full ml-6 mr-4")
                 | {{item.element}}
-        p(v-else v-html="service.opis")
+        p(v-else v-html="service.opis" class="md:text-lg")
         p(class="md:text-lg italic").capitalize {{ service.czas_trwania }}
 </template>
 
