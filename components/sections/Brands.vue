@@ -30,7 +30,7 @@ export default {
         'https://res.cloudinary.com/aherod/image/upload/v1620812254/medium_DSC_1152_b2c24e87a3.jpg'
       ],
       options: {
-        slidesPerView: 2.5,
+        slidesPerView: 1.5,
         breakpoints: {
           1100: {
             slidesPerView: 3,

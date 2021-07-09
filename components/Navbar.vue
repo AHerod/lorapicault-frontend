@@ -2,7 +2,7 @@
   nav(class="uppercase w-full grid grid-cols-12 absolute z-20").text-white
     div(class="col-span-4")
       NuxtLink(to="/")
-        img(:src="require(`@/assets/images/logo_placeholder.png`)" class="md:w-4/5")
+        img(:src="require(`@/assets/images/logo_placeholder.png`)" class="md:w-4/5 mt-2")
     div(:class="open ? 'bg-primary' : ''" class="transition-all duration-500 ease-in-out fixed md:shadow-none col-span-8 md:bg-transparent md:relative justify-end w-full flex")
       button.text-gray-500.w-10.h-10.m-6.relative.text-center(class='focus:outline-none z-30 md:hidden' @click='open = !open' )
         span.sr-only Open main menu

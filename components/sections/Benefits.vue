@@ -1,7 +1,7 @@
 <template lang="pug">
-  section(v-if="atuty" class="md:px-0 py-14 md:py-28").px-4.grid.grid-cols-2.gap-x-8
+  section(v-if="atuty" class="md:px-0 pt-14 md:py-28").px-4.grid.grid-cols-2.gap-x-8
     .flex.flex-col.items-center.justify-center(class="col-span-2 md:col-span-2")
-      h2(class="text-2xl md:text-4xl font-extrabold uppercase pb-3 md:pb-6") {{atuty.tytul}}
+      h2(class="text-2xl md:text-4xl text-center md:text-left font-extrabold uppercase pb-3 md:pb-6") {{atuty.tytul}}
       p(class="text-lg text-center md:w-1/2 lg:w-1/3 mb-6 lg:mb-12") {{atuty.opis}}
     .grid(class="col-span-2 md:col-span-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4")
       div(v-for="(item,index) in atuty.element" :key="index" class="flex flex-col items-center justify-center text-center mb-10")
