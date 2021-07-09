@@ -1,14 +1,13 @@
 <template lang="pug">
 div(v-if="start" class="relative showcase md:h-screen")
-  .container.mx-auto.px-4.py-24(class="md:px-18 lg:py-32 z-10 pt-32")
+  .container.mx-auto(class="container md:px-18 mx-auto mt-40 mb-12 md:my-24 p-11 shadow-lg text-center w-auto z-10" style="background: #353535ba;")
     p.capitalize.font-secondary.text-secondary.text-xl.leading-4(
       class="sm:text-3xl md:text-5xl"
     ) {{ start.naglowek }}
     h1.font-extrabold.text-2xl(class="sm:text-5xl md:text-7xl text-white") {{ start.tytul }}
-    p.pr-4.pt-2.pb-8.text-sm.max-w-screen-sm(class="md:text-lg text-medium") {{ start.opis }}
-    .flex.flex-col.justify-center(class="md:flex-row md:justify-start")
-      base-button.mb-4(tag="a" :href="start.przycisk.url", color="secondary", class="md:mr-6")
-        | {{ start.przycisk.tekst }}
+    p.pr-4.pt-2.pb-8.text-2xl.max-w-screen-sm(class="md:text-lg text-medium") {{ start.opis }}
+    base-button.mb-4(tag="a" :href="start.przycisk.url", color="secondary", class="md:mr-6")
+      | {{ start.przycisk.tekst }}
   .video-container(v-if="video")
     video(src='https://res.cloudinary.com/aherod/video/upload/v1619879518/LORAPICAULT/IMG_1094.MP4_llwnui.mp4' autoplay muted loop)
   section.bg-auto.bg-cover.bg-no-repeat.bg-center.text-white.flex.flex-col.justify-end(

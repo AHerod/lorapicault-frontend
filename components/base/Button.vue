@@ -1,5 +1,5 @@
 <template lang="pug">
-component.text-white.font-bold.uppercase.h-full.border-2.px-8(
+component.text-white.font-bold.uppercase.border-2.px-8(
   :is="tag",
   :href="href",
   :class="[`bg-${color} border-${color} hover:bg-${color}`, color === 'primary' ? 'bg-primary' : 'hover:bg-secondary']",
