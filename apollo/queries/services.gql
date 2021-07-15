@@ -1,8 +1,10 @@
-query allUslugas {
-   uslugas {
-     nazwa
-     opis
-     cena
-     czas_trwania
-   }
- }
+query allUslugi {
+ uslugi {
+    Usluga {
+      nazwa
+      opis
+      czas_trwania
+      cena
+    }
+  }
+}

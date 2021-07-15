@@ -1,8 +1,10 @@
-query allLekcjas {
-  lekcjas {
-    nazwa
-    opis
-    czas_trwania
-    cena
+query allLekcje {
+  lekcje {
+    usluga {
+      nazwa
+      opis
+      czas_trwania
+      cena
+    }
   }
 }

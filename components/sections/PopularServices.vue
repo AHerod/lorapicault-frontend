@@ -28,7 +28,7 @@ export default {
   apollo: {
     allpopular: {
       query: popularServicesQuery,
-      update: data => data['lekcjas'].concat(data['pakiets']).concat(data['uslugas'])
+      update: data => data['lekcje'].concat(data['pakiets']).concat(data['uslugi'])
     }
   }
 
