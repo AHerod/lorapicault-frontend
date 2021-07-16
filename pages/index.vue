@@ -3,6 +3,6 @@ div
   hero
   benefits
   grid
-  //popular-services
+  popular-services
   brands
 </template>

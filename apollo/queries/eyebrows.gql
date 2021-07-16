@@ -1,6 +1,6 @@
-query allUslugi {
- uslugi {
-    Usluga {
+query allBrwi {
+  brwi {
+    usluga {
       popularna
       nazwa
       opis

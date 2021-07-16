@@ -1,6 +1,7 @@
 query allLekcje {
   lekcje {
     usluga {
+      popularna
       nazwa
       opis
       czas_trwania

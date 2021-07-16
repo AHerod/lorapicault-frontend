@@ -6,7 +6,7 @@
     )
       div(class="flex items-center grid grid-cols-12" v-if="service.nazwa")
         div(class="flex items-center w-full col-span-9")
-          p(class="md:text-xl min-w-max").uppercase.font-bold {{ prefix(service.__typename) }}{{ service.nazwa }}
+          p(class="md:text-xl min-w-max").uppercase.font-bold {{ service.nazwa }}
           p(class="border-b-2 md:border-b-4 border-dotted w-full ml-4 md:ml-8")
         p(class="md:text-2xl pl-2 col-span-3").text-center.font-extrabold.text-secondary.flex {{ getCurrencyFormat(service.cena) }}
       div
@@ -29,15 +29,6 @@ export default {
     },
     wrapperClasses: {
        type: String
-    }
-  },
-  data() {
-    return {
-    };
-  },
-  methods: {
-    prefix: function (service) {
-      return service === 'Lekcje' ? 'Lekcja: ' : '';
     }
   }
 }

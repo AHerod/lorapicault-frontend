@@ -1,6 +1,7 @@
 query allPopular {
   uslugi{
-    Usluga(where:{popularna:true}) {
+    Usluga {
+      popularna
       nazwa
       opis
       czas_trwania
@@ -8,7 +9,17 @@ query allPopular {
     }
   }
   lekcje {
-    Usluga(where:{popularna:true}) {
+    usluga {
+      popularna
+      nazwa
+      opis
+      czas_trwania
+      cena
+    }
+  }
+  brwi {
+    usluga {
+      popularna
       nazwa
       opis
       czas_trwania

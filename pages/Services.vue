@@ -15,6 +15,11 @@
         p(class="text-lg text-center w-4/5 md:w-1/2 lg:w-1/3 mb-6 lg:mb-12") {{ cennik.opis }}
         pricing(v-for="usluga in uslugi" :services="usluga" wrapperClasses="w-full grid md:grid-cols-2 gap-x-28 px-4")
 
+      section(id="eyebrows").flex.flex-col.items-center.justify-center.pt-16.pb-10
+        h2(class="text-2xl md:text-4xl font-extrabold uppercase pb-3 md:pb-6") Brwi
+        p(class="text-lg text-center w-4/5 md:w-1/2 lg:w-1/3 mb-6 lg:mb-12") {{ cennik.opis_brwi }}
+        pricing(v-for="usluga in brwi" :services="usluga" wrapperClasses="w-full grid md:grid-cols-2 gap-x-28 px-4")
+
       section(id="packages").flex.flex-col.items-center.justify-center.pt-16.pb-10
         h2(class="text-2xl md:text-4xl font-extrabold uppercase pb-3 md:pb-6") Pakiety
         p(class="text-lg text-center w-4/5 md:w-1/2 lg:w-1/3 mb-6 lg:mb-12") {{ cennik.opis_pakietow }}
@@ -41,6 +46,7 @@ import currency from "@/mixins/currency";
 import servicesQuery from '~/apollo/queries/services'
 import packagesQuery from '~/apollo/queries/packages'
 import lessonsQuery from '~/apollo/queries/lessons'
+import eyebrowsQuery from '~/apollo/queries/eyebrows'
 import servicesCopyQuery from '~/apollo/queries/services_copy'
 
 export default {
@@ -48,14 +54,18 @@ export default {
   data() {
     return {
       voucherUrl,
-      nav: [{name: 'Usługi', path: 'services'}, {name: 'Pakiety', path: 'packages'}, {
-        name: 'Lekcje',
-        path: 'lessons'
-      }, {name: 'Voucher', path: 'voucher'}],
-
+      nav: [
+        {name: 'Makijaż', path: 'services'},
+        {name: 'Brwi', path: 'eyebrows'},
+        {name: 'Pakiety', path: 'packages'},
+        {name: 'Lekcje',path: 'lessons'},
+        {name: 'Voucher', path: 'voucher'}]
     };
   },
   apollo: {
+    brwi: {
+      query: eyebrowsQuery
+    },
     uslugi: {
       query: servicesQuery
     },
