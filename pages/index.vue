@@ -2,6 +2,7 @@
 div
   hero
   benefits
+  grid(:maxAmount="5")
   popular-services
   brands
 </template>

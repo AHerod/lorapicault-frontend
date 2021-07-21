@@ -8,6 +8,7 @@ div(v-if="galeria && galeria.obraz").color-medium
           h2(class="text-2xl md:text-4xl font-extrabold uppercase pb-3 md:pb-6") {{ galeria.tytul }}
           p(class="text-lg text-center md:w-1/2 lg:w-1/3 mb-6 lg:mb-12") {{ galeria.opis }}
   section(class="md:px-0 py-20")
+    grid(:maxAmount="100")
 </template>
 
 <script>
