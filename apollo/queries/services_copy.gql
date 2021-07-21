@@ -8,6 +8,7 @@ query Cennik {
     opis_pakietow
     opis_lekcji
     opis_vouchera
+    dojazd
     zdjecie_vouchera {
       url
     }
