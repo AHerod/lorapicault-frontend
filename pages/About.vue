@@ -19,7 +19,7 @@
           div(v-html="bio.opis").pr-4.pt-4.pb-2.max-w-screen-sm
         div(class="test col-span-1 sm:col-span-5 py-20")
           swiper(ref="mySwiper" :options="options" class="mx-18")
-            swiper-slide(v-for="item in bio.galeria")
+            swiper-slide(v-for="(item,index) in bio.galeria" :key="index")
               img(:src="item.url" class="p-4")
 </template>
 

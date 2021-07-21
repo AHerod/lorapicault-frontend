@@ -5,7 +5,7 @@
       img(v-if="item.ikona" v-for="(item, index) in brands" :key="index" :src="item.ikona.url"  :alt="item.tytul" class="px-4 md:px-10 lg:px-20")
     div(class="test col-span-1 sm:col-span-5 py-20 md:px-12")
       swiper(ref="mySwiper" :options="options" class="mx-18")
-        swiper-slide(v-for="item in items")
+        swiper-slide(v-for="(item, index) in items" :key="index")
           img(:src="item" class="p-4 bg-accent shadow-2xl")
 </template>
 

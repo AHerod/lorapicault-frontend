@@ -2,10 +2,10 @@
   div(v-if="galeria && galeria.obraz")
     div(class="flex justify-center align-center flex-wrap")
       span(class="text-sm sm:text-lg p-2 md:px-8 uppercase") Makijaż:
-      span(v-for="(filter,index) in makeups" :key="index+'filter'" @click="currentFilter = currentFilter === index + 1 ? 'all' : index + 1" class="text-sm sm:text-lg p-2 md:px-6 uppercase border-b border-transparent hover:border-accent cursor-pointer hover:font-bold text-center") {{filter.nazwa}}
+      span(v-for="(filter,index) in makeups" :key="index+'filter'" @click="currentFilter = currentFilter === index + 1 ? 'all' : index + 1" :class="currentFilter === index + 1 ? 'font-bold' : 'font-light'" class="text-sm sm:text-lg p-2 md:px-6 uppercase border-b border-transparent hover:border-accent cursor-pointer hover:font-bold text-center") {{filter.nazwa}}
     div(class="grid grid-cols-4 gap-4 md:gap-8 px-4 md:px-8 pt-6 md:px-24")
       cool-light-box(:items="items" :index="index" @close="index = null" :autoplay="true" :useZoomBar="true")
-      div(:style="`height: ${height}px`" class="shadow-2xl relative w-full" v-for="(image,imageIndex) in items" v-if="(image.makeups.filter(el => el.id.includes(currentFilter.toString())).length > 0 || currentFilter === 'all')" :key="imageIndex"  @click="index = imageIndex" :class="imageSize(imageIndex) + ''")
+      div(:style="`height: ${height}px`" class="shadow-2xl relative w-full" v-for="(image,imageIndex) in items" v-if="(image.makeups.filter(el => el.id.includes(currentFilter.toString())).length > 0 || currentFilter === 'all' && (imageIndex < limitGallery()))" :key="imageIndex"  @click="index = imageIndex" :class="imageSize(imageIndex) + ''")
         video(v-if="image.video" @mouseover="playVideo" @mouseout="stopVideo" :style="`height: ${height}px`" class="cursor-pointer w-full block absolute transform object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" playsinline muted)
           source(:src="image.src")
         img(v-else="!image.video" ref="square" :style="`height: ${height}px`" :src="image.src" class="w-full block absolute transform object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2")
@@ -27,6 +27,11 @@
   export default {
     components: {
       CoolLightBox,
+    },
+    props: {
+      maxAmount: {
+        type: Number,
+      }
     },
     data() {
       return {
@@ -61,6 +66,9 @@
       window.addEventListener('resize', this.updateElementHeight)
     },
     methods: {
+      limitGallery: function () {
+        return this.currentFilter === 'all' ? this.maxAmount : 100
+      },
       imageSize: function (index) {
         if(index % 4 === 0) {
           return 'col-span-4 h-18'
