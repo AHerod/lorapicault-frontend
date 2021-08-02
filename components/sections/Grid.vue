@@ -1,7 +1,7 @@
 <template lang="pug">
   div(v-if="galeria && galeria.obraz")
     div(class="flex justify-center align-center flex-wrap")
-      span(class="text-sm sm:text-lg p-2 md:px-8 uppercase") Makijaż:
+      span(class="text-sm sm:text-lg p-2 md:px-8 uppercase") Makijaż: {{currentFilter}}
       span(v-for="(filter,index) in makeups" :key="index+'filter'" @click="currentFilter = currentFilter === index + 1 ? 'all' : index + 1" :class="currentFilter === index + 1 ? 'font-bold' : 'font-light'" class="text-sm sm:text-lg p-2 md:px-6 uppercase border-b border-transparent hover:border-accent cursor-pointer hover:font-bold text-center") {{filter.nazwa}}
     div(class="grid grid-cols-4 gap-4 md:gap-8 px-4 md:px-8 pt-6 md:px-24")
       cool-light-box(:items="items" :index="index" @close="index = null" :autoplay="true" :useZoomBar="true")
@@ -78,7 +78,7 @@
       },
       updateElementHeight: function () {
         if (this.$refs.square[0] && this.galeria.obraz.length > 0) {
-          this.height = this.$refs.square[1].clientWidth / 3 * 2
+          this.height = this.$refs.square[1].clientWidth * 1.5
         }
       },
       playVideo: function (e) {

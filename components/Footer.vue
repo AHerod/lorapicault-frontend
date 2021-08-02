@@ -3,10 +3,10 @@
     .col-span-2.border-dark.border-b.w-full.py-4
       img(:src="require(`@/assets/images/logo_placeholder.png`)" class="w-72 m-auto")
     .grid(class="col-span-2 grid-cols-2 lg:grid-cols-4 py-10")
-      a(v-for="(item,index) in list" class="text-center  grid grid-rows-2")
+      a(v-for="(item,index) in list" class="text-center grid grid-rows-2")
         div(class="bg-heavy rounded-full w-14 h-14 mb-6 relative m-auto" v-if="item.ikona")
           img(:src="item.ikona.url" class="w-10 h-10 absolute right-1/2 bottom-1.5")
-        h3(class="text-lg md:text-xl pb-2") {{item.tytul}}
+        h3(class="text-lg md:text-xl pb-2 break-all") {{item.tytul}}
 </template>
 
 <script>

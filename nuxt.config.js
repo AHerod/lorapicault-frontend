@@ -6,6 +6,9 @@ const cloudinarySecret = process.env.CLOUDINARY_SECRET;
 const appName = process.env.APP_NAME;
 
 export default {
+  generate: {
+    fallback: true
+  },
   env: {
     strapiAPIUri,
     strapiBaseUri,
