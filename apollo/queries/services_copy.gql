@@ -6,6 +6,7 @@ query Cennik {
     }
     opis
     opis_pakietow
+    opis_brwi,
     opis_lekcji
     opis_vouchera
     dojazd

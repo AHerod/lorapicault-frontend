@@ -3,6 +3,7 @@
     .mb-6.flex.flex-col(
       v-for="service in services",
       class="lg:mb-8"
+      v-if="service.nazwa"
     )
       div(class="flex items-center grid grid-cols-12" v-if="service.nazwa")
         div(class="flex items-center w-full col-span-9")

@@ -6,7 +6,7 @@
     div(class="grid grid-cols-4 gap-4 md:gap-8 px-4 md:px-8 pt-6 md:px-24")
       cool-light-box(:items="items" :index="index" @close="index = null" :autoplay="true" :useZoomBar="true")
       div(:style="`height: ${height}px`" class="shadow-2xl relative w-full" v-for="(image,imageIndex) in items" v-if="(image.makeups.filter(el => el.id.includes(currentFilter.toString())).length > 0 || currentFilter === 'all' && (imageIndex < limitGallery()))" :key="imageIndex"  @click="index = imageIndex" :class="imageSize(imageIndex) + ''")
-        video(v-if="image.video" @mouseover="playVideo" @mouseout="stopVideo" :style="`height: ${height}px`" class="cursor-pointer w-full block absolute transform object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" playsinline muted)
+        video(v-if="image.video" @mouseover="playVideo" @mouseout="stopVideo" :style="`height: ${height}px`" class="cursor-pointer w-full block absolute transform object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" autoplay="false" :playsinline="true" muted)
           source(:src="image.src")
         img(v-else="!image.video" ref="square" :style="`height: ${height}px`" :src="image.src" class="w-full block absolute transform object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2")
         svg(v-show="image.video" class="absolute right-2 top-2 w-6 h-6" xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 30.051 30.051' fill="#fff" xml:space='preserve')
