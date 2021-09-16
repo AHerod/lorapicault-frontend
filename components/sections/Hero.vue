@@ -9,7 +9,7 @@ div(v-if="start" class="relative showcase md:h-screen")
     base-button.mb-4(tag="a" :href="start.przycisk.url", color="secondary", class="md:mr-6")
       | {{ start.przycisk.tekst }}
   .video-container(v-if="video")
-    video(src='https://res.cloudinary.com/aherod/video/upload/v1619879518/LORAPICAULT/IMG_1094.MP4_llwnui.mp4' autoplay="true" :playsinline="true" muted loop="loop")
+    video(:src='start.tlo.obraz.url' autoplay="true" :playsinline="true" muted loop="loop")
   section.bg-auto.bg-cover.bg-no-repeat.bg-center.text-white.flex.flex-col.justify-end(
     class="md:h-screen",
     :style="{ backgroundImage: `url(${backgroundUrl})` }"
