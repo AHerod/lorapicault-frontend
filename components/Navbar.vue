@@ -1,9 +1,9 @@
 <template lang="pug">
   nav(class="uppercase w-full grid grid-cols-12 absolute z-20").text-white
-    div(class="col-span-4 z-50")
+    div(class="col-span-6 sm:col-span-4 z-50")
       NuxtLink(to="/")
-        img(:src="require(`@/assets/images/logo_placeholder.png`)" class="md:w-4/5 mt-2")
-    div(:class="open ? 'bg-primary' : ''" class="transition-all duration-500 ease-in-out fixed md:shadow-none col-span-8 md:bg-transparent md:relative justify-end w-full flex")
+        img(:src="require(`@/assets/images/logo.png`)" class="md:w-3/5 md:p-4 mt-3 ml-5 w-10/12")
+    div(:class="open ? 'bg-primary' : ''" class="transition-all duration-500 ease-in-out fixed md:shadow-none col-span-6 sm:col-span-8 md:bg-transparent md:relative justify-end w-full flex")
       button.text-gray-500.w-10.h-10.m-6.relative.text-center(class='focus:outline-none z-30 md:hidden' @click='open = !open' )
         span.sr-only Open main menu
         .block.w-5.absolute.transform(class='left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2')

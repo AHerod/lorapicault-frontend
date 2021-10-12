@@ -1,7 +1,7 @@
 <template lang="pug">
   section(class="md:px-0" v-if="list").px-4.grid.grid-cols-2.py-2.gap-x-8.bg-primary.text-white
     .col-span-2.border-dark.border-b.w-full.py-4
-      img(:src="require(`@/assets/images/logo_placeholder.png`)" class="w-72 m-auto")
+      img(:src="require(`@/assets/images/logo.png`)" class="w-72 m-auto")
     .grid(class="col-span-2 grid-cols-2 lg:grid-cols-4 py-10")
       a(v-for="(item,index) in list" class="text-center grid grid-rows-2")
         div(class="bg-heavy rounded-full w-14 h-14 mb-6 relative m-auto" v-if="item.ikona")
