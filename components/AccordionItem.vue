@@ -8,7 +8,7 @@
       <button
         @click="toggle"
         class="w-full text-left border-transparent accordion-item-trigger"
-        :class="{ 'bg-accent': item.active }"
+        :class="{ 'bg-medium': item.active }"
       >
         <h4 class="accordion-item-title-text">{{ item.title }}</h4>
         <span

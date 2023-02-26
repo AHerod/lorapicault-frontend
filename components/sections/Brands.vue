@@ -6,7 +6,7 @@
     div(class="test col-span-1 sm:col-span-5 py-20 md:px-12")
       swiper(ref="mySwiper" :options="options" class="mx-18")
         swiper-slide(v-for="(item, index) in items" :key="index")
-          img(:src="item" class="p-4 bg-accent shadow-2xl")
+          img(:src="item" class="p-4 bg-medium shadow-2xl")
 </template>
 
 <script>
