@@ -10,6 +10,7 @@ module.exports = {
       dark: "#6a6a6a",
       heavy:'#3d3d3d',
       accent: "#fff7f4",
+      grey: "#dce1db",
       info: "",
       success: "",
       warning: "",
@@ -25,7 +26,7 @@ module.exports = {
     },
     fontFamily: {
       primary: ["Lato", "sans-serif"],
-      secondary: ["Alex Brush", "cursive"],
+      secondary: ["Caladea", "cursive"],
     },
   },
   variants: {

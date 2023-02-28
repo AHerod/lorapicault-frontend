@@ -12,7 +12,7 @@
         .container.mx-auto.px-4.py-14.flex.flex-col.col-span-1(
           class="md:px-18 xl:px-24 lg:py-32 sm:col-span-3"
         )
-          p.capitalize.font-secondary.text-dark.text-xl.leading-4(
+          p.font-secondary.text-dark.text-xl.leading-4(
             class="md:text-5xl"
           ) {{ bio.tytul }}
           h1.font-extrabold.text-2xl(class="md:text-4xl") Lora Picault

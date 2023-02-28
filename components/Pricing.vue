@@ -16,7 +16,7 @@
                 span(class="bg-medium block w-3 h-3 rounded-full ml-6 mr-4" :style={minWidth: '12px', minHeight: '12px'})
                 | {{item.element}}
         p(v-else v-html="service.opis" class="md:text-lg")
-        p(class="md:text-lg italic").capitalize {{ service.czas_trwania }}
+        p(class="md:text-lg italic") {{ service.czas_trwania }}
 </template>
 
 <script>

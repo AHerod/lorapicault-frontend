@@ -1,7 +1,7 @@
 <template lang="pug">
 div(v-if="start" class="relative showcase md:h-screen start-section bg-cover" :style="{ backgroundImage: `${isPhoto ? `url(${start.tlo.obraz.url})` : ''}` }")
   .container(class="container md:px-18 mt-40 mb-4 md:mb-12 md:ml-6 p-6 shadow-lg text-center w-auto z-10" style="background: #353535ba;")
-    p.mb-4.capitalize.font-secondary.text-light.text-xl.leading-4(
+    p.mb-4.font-secondary.text-light.text-xl.leading-4(
       class="sm:text-3xl md:text-4xl"
     ) {{ start.naglowek }}
     h1.font-extrabold.text-2xl(class="sm:text-5xl md:text-7xl text-white") {{ start.tytul }}

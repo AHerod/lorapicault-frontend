@@ -3,7 +3,7 @@
     p(class="text-center uppercase font-bold pb-8") {{ marki.tytul }}
     .grid(class="col-span-2 grid-rows-2 grid-cols-3 sm:grid-cols-3 lg:grid-rows-1 lg:grid-cols-6 flex justify-item center items-center")
       img(v-if="item.ikona" v-for="(item, index) in brands" :key="index" :src="item.ikona.url"  :alt="item.tytul" class="px-4 md:px-10 lg:px-10")
-    div(class="test col-span-1 sm:col-span-5 py-20 md:px-12")
+    div(v-if="showSlider" class="test col-span-1 sm:col-span-5 py-20 md:px-12")
       swiper(ref="mySwiper" :options="options" class="mx-18")
         swiper-slide(v-for="(item, index) in items" :key="index")
           img(:src="item" class="p-4 bg-medium shadow-2xl")
@@ -20,6 +20,7 @@ export default {
   },
   data() {
     return {
+      showSlider: false,
       items: [
         'https://res.cloudinary.com/dhxyosqsq/image/upload/v1631816551/DSC_1189_rdidbg.jpg',
         'https://res.cloudinary.com/dhxyosqsq/image/upload/v1631816551/DSC_1139_st9hzd.jpg',
